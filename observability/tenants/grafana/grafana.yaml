@@ -3,5 +3,5 @@ rbac:
 
 service:
   type: LoadBalancer
-    annotations:
-      metallb.universe.tf/address-pool: default-addresspool ## tells the address pool to be used by metallb for providing LB IP.
+  annotations:
+    metallb.universe.tf/address-pool: default-addresspool ## tells thed address pool to be used by metallb for providing LB IP.

@@ -9,22 +9,22 @@ spec:
       repoURL: https://github.com/iamgauravpande/wsl2-microk8s-lab.git
       revision: main
       files:
-      - path: "observability/tenant-discovery/tenant/grafana/config.json"
+      - path: "observability/tenant-discovery/tenant/**/config.json"
   template:
     metadata:
-      name: grafana
+      name: '{{tenantid}}'
     spec:
       project: default
       source:
         repoURL: https://github.com/iamgauravpande/wsl2-microk8s-lab.git
         targetRevision: main
-        path: 'observability/tenants/grafana'
+        path: 'observability/tenants/{{tenantid}}'
         helm:
           valueFiles:
-            - 'grafana.yaml'
+            - '{{tenantid}}.yaml'
       destination:
-        server: '{{.cluster.address}}'
-        namespace: '{{.cluster.namespace}}'
+        server: '{{cluster.address}}'
+        namespace: '{{cluster.namespace}}'
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
