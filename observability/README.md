@@ -8,7 +8,9 @@ This will contain all the observability tools helm charts that will be deployed 
 
 ### Observability Tenants:
 
-- Grafana : Under `observability/tenants` directory run below command to Various Observability Tools helm repo and pull it. 
+#### Grafana: 
+
+- Under `observability/tenants` directory run below command to Various Observability Tools helm repo and pull it. 
 
 ```
 /snap/bin/microk8s helm repo add grafana https://grafana.github.io/helm-charts
@@ -16,3 +18,8 @@ This will contain all the observability tools helm charts that will be deployed 
 tar -zxvf grafana-8.3.6.tgz
 rm -rf grafana-8.3.6.tgz
 ```
+- To get initial password retrieve it using below command: 
+
+*NOTE: jq package should be installed on your machine*
+
+`kubectl get secrets/<secret_resource_name> -n <namespace> -o json | jq '.data | map_values(@base64d)'`
