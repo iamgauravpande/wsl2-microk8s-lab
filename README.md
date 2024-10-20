@@ -35,7 +35,12 @@ sudo ./svc.sh start <username>
 ### LoadBalancer needs:
 - MetalLB: A network LB implementation that tries to “just work” on bare metal clusters. See [Enable MetalLB Addon](https://microk8s.io/docs/addon-metallb)
 
-*NOTE: While enabling the addon make sure to provide the subnet/range of IP that falls within your local network*
+*NOTE: While enabling the addon make sure to provide the subnet/range of IP that falls within your local network, See below example*
+
+```
+microk8s enable metallb:172.30.208.2-172.30.208.5
+```
+
 
 ### LAB STACK:
 - Declartive Delivery tool: We will use ArgoCD to deploy applications on our Microk8s Cluster see [Delivery Tool](https://github.com/iamgauravpande/wsl2-microk8s-lab/tree/main/delivery-tool#readme) for details.
