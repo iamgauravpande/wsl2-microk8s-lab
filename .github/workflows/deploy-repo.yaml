@@ -11,9 +11,8 @@ on:
       - '.github/workflows/deploy-repo.yaml'
   
 jobs:
-
   Create-Repository:
-    runs-on: wsl2-runner01
+    runs-on: gp_runner_01
 
     steps:
 
