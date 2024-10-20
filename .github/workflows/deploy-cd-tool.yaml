@@ -12,7 +12,7 @@ on:
       
 jobs:
   deploy-argocd:
-    runs-on: wsl2-runner01
+    runs-on: gp_runner_01
 
     steps:
     - name: Checkout code
