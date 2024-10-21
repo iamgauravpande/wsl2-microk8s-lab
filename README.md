@@ -41,8 +41,7 @@ sudo ./svc.sh start <username>
 microk8s enable metallb:172.30.208.2-172.30.208.5
 ```
 
-
-### LAB STACK:
-- Declartive Delivery tool: We will use ArgoCD to deploy applications on our Microk8s Cluster see [Delivery Tool](https://github.com/iamgauravpande/wsl2-microk8s-lab/tree/main/delivery-tool#readme) for details.
+### Declartive Delivery tool:
+- ArgoCD: We will use ArgoCD to deploy other tools/applications on our Microk8s Cluster see [Delivery Tool](https://github.com/iamgauravpande/wsl2-microk8s-lab/tree/main/delivery-tool#readme) for details.
 
 
